@@ -32,31 +32,31 @@ export default function LogIn({ authenticate }) {
       }
       USER_HELPERS.setUserToken(res.data.accessToken);
       authenticate(res.data.user);
-      navigate(PATHS.HOMEPAGE);
+      navigate(PATHS.LANDINGPAGE);
     });
   }
 
   return (
-    <div>
-      <h1>Log In</h1>
-      <form onSubmit={handleFormSubmission} className="signup__form">
-        <label htmlFor="input-username">Username</label>
-        <input
+    <div className="regBox">
+      <h1>Entra</h1>
+      <form onSubmit={handleFormSubmission} className="auth__form">
+        <label htmlFor="input-username" className="label">Nombre de usuario</label>
+        <input className="input"
           id="input-username"
           type="text"
           name="username"
-          placeholder="username"
+          placeholder="Nombre de usuario"
           value={username}
           onChange={handleInputChange}
           required
         />
 
-        <label htmlFor="input-password">Password</label>
-        <input
+        <label htmlFor="input-password" className="label">Contraseña</label>
+        <input className="input"
           id="input-password"
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder="Contraseña"
           value={password}
           onChange={handleInputChange}
           required
@@ -71,7 +71,7 @@ export default function LogIn({ authenticate }) {
         )}
 
         <button className="button__submit" type="submit">
-          Submit
+          ¡Entrar!
         </button>
       </form>
     </div>

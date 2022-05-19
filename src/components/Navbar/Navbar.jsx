@@ -8,7 +8,7 @@ const Navbar = (props) => {
 return (
 <nav>
   <Link to={PATHS.HOMEPAGE} className="nav__projectName">
-  {CONSTS.CAPITALIZED_APP} - created with IronLauncher
+  {CONSTS.APP_NAME}
   </Link>
 
   <div className="nav__authLinks">
@@ -18,16 +18,16 @@ return (
       Protected Page
       </Link>
       <button className="nav-logoutbtn" onClick={props.handleLogout}>
-        Logout
+        Salir
       </button>
     </>
     ) : (
     <>
       <Link to={PATHS.SIGNUPPAGE} className="authLink">
-      Signup
+      Registrate!
       </Link>
       <Link to={PATHS.LOGINPAGE} className="authLink">
-      Log In
+      Entra
       </Link>
     </>
     )}

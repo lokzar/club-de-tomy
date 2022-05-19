@@ -1,0 +1,89 @@
+body{
+    background-image: url("https://res.cloudinary.com/dz29bpftp/image/upload/v1652982413/Club-Tomy/Fondo_C%C3%ADrculos_e9bpng.png");
+    background-size: 2000px;
+    background-attachment: fixed;
+}
+
+.header{
+    font-size: 3em;
+    background:linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    color: white;
+    height: 500px;
+    display: flex;
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient{
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.h1Home, .h3Home{
+    margin: auto;
+    padding: 30px;
+}
+
+.h2Home{
+    background-color:transparent;
+    font-size: 2.5em;
+    margin: auto;
+    padding: 30px;
+}
+
+
+.imgHome{
+    padding: 30px;
+    
+}
+
+.Cards {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.Card1,
+.Card2,
+.Card3 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    width: 30%;
+    padding: 15px;
+    background-position: center;
+    background-size: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Card1 {
+    background-color: rgba(99, 164, 7, 0.7);
+}
+
+.Card2 {
+    background-color: rgb(219, 199, 67, 0.7);
+}
+
+.Card3 {
+    background-color: rgb(46, 79, 242, 0.7);
+}
+
+.askCard{
+    background-color: purple;
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    padding-bottom: 50px;
+}

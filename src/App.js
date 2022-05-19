@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { getLoggedIn, logout } from "./services/auth";
 import routes from "./config/routes";
 import * as USER_HELPERS from "./utils/userToken";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -52,11 +53,13 @@ export default function App() {
   return (
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />
+      
       <Routes>
         {routes({ user, authenticate, handleLogout }).map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
       </Routes>
+      <Footer/>
     </div>
   );
 }

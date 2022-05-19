@@ -3,6 +3,7 @@ import HomePage from "../pages/HomePage";
 import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
 import ProtectedPage from "../pages/ProtectedPage";
+import LandingPage from "../pages/LandingPage";
 import * as PATHS from "../utils/paths";
 
 const routes = (props) => {
@@ -25,6 +26,14 @@ const routes = (props) => {
       path: PATHS.PROTECTEDPAGE,
       element: user ? (
         <ProtectedPage {...props} />
+      ) : (
+        <Navigate to={PATHS.LOGINPAGE} replace />
+      ),
+    },
+    {
+      path: PATHS.LANDINGPAGE,
+      element: user ? (
+        <LandingPage {...props} />
       ) : (
         <Navigate to={PATHS.LOGINPAGE} replace />
       ),

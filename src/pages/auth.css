@@ -1,13 +1,46 @@
-form.auth__form {
+.regBox{
+  background-color: purple;
+  color: white;
+  border-radius: 50px;
+  max-width: 400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+
+.auth__form {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-content: center;
-  max-width: 300px;
+  width: 300px;
   margin: 0 auto;
 }
 
-button.button__submit {
-  max-width: 100px;
+.label{
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.input{
+  text-align: center;
+  height: 30px;
+  border-style: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+.button__submit {
+  width: 200px;
+  height: 40px;
+  color: white;
+  font-size: 1.2em;
+  border-style: none;
+  border-radius: 10px;
+  background-color: rgb(205, 113, 9);
   margin: 1em auto;
 }
+
+
