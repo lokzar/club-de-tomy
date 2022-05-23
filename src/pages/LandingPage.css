@@ -1,3 +1,57 @@
+.landingPageBg{
+ background-color: transparent;
+ height: 1400px;
+}
+
+.profileInfo{
+    padding: 20px;
+}
+
 .profileLanding{
     height: 100px;
+    width: 100px;
+    background-color: rgb(140, 200, 30);
+    border-radius: 40%;
+    padding: 10px;
+    margin: 10px;
 }
+
+.landingButton{
+    height: 40px;
+    color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+    width: 200px;
+    background-color: #ebbb0b;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.badges{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profileImgButton{
+    height: 30px;
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    background-color: #169ec0;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profileImgButton:hover {
+    transform: scale(1.05);
+    background-color: #ebbb0b;
+  }
+
+  .landingButton:hover {
+    transform: scale(1.05);
+    background-color: #169ec0;
+  }

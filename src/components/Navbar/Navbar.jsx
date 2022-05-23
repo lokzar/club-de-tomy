@@ -11,7 +11,7 @@ return (
   <div>
     {(props.user?.profile==="member") ?(
     <div className=" nav  nav__authLinks">
-      <Link to={PATHS.LANDINGPAGE}>
+      <Link to={`/:${props.user?._id}`}>
       <img className="logo" src={loadingGif} alt="tomylogo" />
       </Link>
       <Link to={PATHS.TOMYBANCO} className="authLink">
@@ -23,7 +23,7 @@ return (
       <Link to={PATHS.CARRITO} className="authLink">
       Carrito
       </Link>
-      <Link to={PATHS.LANDINGPAGE} className="authLink">
+      <Link to={`/:${props.user?._id}`} className="authLink">
       {props.user?.username}
       <img className="profile" src={props.user?.avatar}></img>
       </Link>
@@ -33,10 +33,10 @@ return (
     </div>
     ): (props.user?.profile==="doctor") ?(
       <div className=" nav  nav__authLinks">
-        <Link to={PATHS.LANDINGPAGE}>
+        <Link to={`/:${props.user?._id}`}>
         <img className="logo" src={loadingGif} alt="tomylogo" />
         </Link>
-        <Link to={PATHS.LANDINGPAGE} className="authLink">
+        <Link to={`/:${props.user?._id}`} className="authLink">
         {props.user?.username}
         <img className="profile" src={props.user?.avatar}></img>
         </Link>

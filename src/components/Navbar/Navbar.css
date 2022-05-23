@@ -37,6 +37,7 @@
   margin-left: 15px;
   background-color: #ebbb0b;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   color: #e3f2ff;
   transition: all 0.2s ease-in-out;

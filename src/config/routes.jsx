@@ -33,7 +33,7 @@ const routes = (props) => {
       ),
     },
     {
-      path: PATHS.LANDINGPAGE,
+      path: `/:${props.user?._id}`,
       element: user ? (
         <LandingPage {...props} />
       ) : (
