@@ -1,0 +1,11 @@
+.saldo{
+    font-size: 4em;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+}
+
+.TomyBanco{
+height: 1300px;
+}

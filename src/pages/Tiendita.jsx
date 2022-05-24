@@ -3,7 +3,7 @@ import React from "react";
 import ProductCard from "../components/Product/ProductCard";
 import {useState, useEffect} from "react";
 
-const ProtectedPage = (props) => {
+const Tiendita = (props) => {
     const[products,setProducts]=useState([])
     useEffect(() => {
         axios
@@ -18,10 +18,8 @@ const ProtectedPage = (props) => {
             {products.map(product=>
                 <ProductCard key={product._id} productData={product}/>
             )}
-            
-
         </div>
     );
 };
 
-export default ProtectedPage;
+export default Tiendita;

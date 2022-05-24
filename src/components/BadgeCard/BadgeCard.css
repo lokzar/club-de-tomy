@@ -2,8 +2,8 @@
     padding: 10px;
 }
 
-.badgeCardInfo{
-    height: 300px;
+.badgeCardInfo, .badgeCardBankInfo{
+    height: 350px;
     width: 200px;
     color: white;
     background-color: purple;
@@ -16,3 +16,24 @@
     height: 100px;
     max-width: 110px;
 }
+
+.changeBadgeBtn{
+    height: 30px;
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    background-color: #ebbb0b;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.changeBadgeBtn:hover {
+    transform: scale(1.05);
+    background-color: rgb(140, 200, 30);
+  }
+
+  .badgeCardBankInfo{
+    height: 270px;
+  }
