@@ -1,9 +1,13 @@
-.badgeCard{
+.badgeCard {
     padding: 10px;
 }
 
-.badgeCardInfo, .badgeCardBankInfo{
-    height: 350px;
+.badgeCardInfo {
+    height: 260px;
+}
+
+.badgeCardInfo,
+.badgeCardBankInfo {
     width: 200px;
     color: white;
     background-color: purple;
@@ -12,12 +16,12 @@
     padding: 10px;
 }
 
-.imgBadge{
+.imgBadge {
     height: 100px;
     max-width: 110px;
 }
 
-.changeBadgeBtn{
+.changeBadgeBtn {
     height: 30px;
     font-size: 1.3em;
     color: white;
@@ -32,8 +36,8 @@
 .changeBadgeBtn:hover {
     transform: scale(1.05);
     background-color: rgb(140, 200, 30);
-  }
+}
 
-  .badgeCardBankInfo{
+.badgeCardBankInfo {
     height: 270px;
-  }
+}

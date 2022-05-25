@@ -27,7 +27,7 @@
     border-radius: 5px;
     cursor: pointer;
 }
-.badges{
+.badges, .products{
     width: 100%;
     padding: 10px;
     display: flex;

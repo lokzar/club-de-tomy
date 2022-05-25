@@ -1,0 +1,36 @@
+.productCard {
+    padding: 10px;
+}
+
+
+.productCardInfo {
+    height: 350px;
+    width: 300px;
+    color: white;
+    background-color: purple;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.imgProduct {
+    height: 100px;
+    max-width: 110px;
+}
+
+.changeProductBtn {
+    height: 30px;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    background-color: #ebbb0b;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.changeProductBtn:hover {
+    transform: scale(1.05);
+    background-color: rgb(140, 200, 30);
+}

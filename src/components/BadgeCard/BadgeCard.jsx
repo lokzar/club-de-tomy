@@ -9,7 +9,6 @@ const BadgeCard = (props) => {
         <h3>{badgeData?.name}</h3>
         <img className='imgBadge' src={badgeData?.avatar}></img>
         <p>{badgeData?.description}</p>
-        <h4>Valor: <strong>{badgeData?.value}</strong> Tomy Pesos</h4>
         </div>
       </div>
     );
