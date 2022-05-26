@@ -69,7 +69,7 @@ export default function Signup({ authenticate }) {
 
         {error && (
           <div className="error-block">
-            <p>There was an error submiting the form:</p>
+            <p>Error en evío de formulario:</p>
             <p>{error.message}</p>
           </div>
         )}

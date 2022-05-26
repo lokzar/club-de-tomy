@@ -6,7 +6,6 @@ import * as PATHS from "../utils/paths";
 
 
 const LandingPage = (props) => {
-    console.log(props)
 return (
 <div className="landingPageBg">
     <section className="profileInfo">

@@ -65,8 +65,8 @@ export default function LogIn({ authenticate }) {
 
         {error && (
           <div className="error-block">
-            <p>There was an error submiting the form:</p>
-            <p>{error.message}</p>
+            <p>Hubo un error en tus datos:</p>
+            <p>Usuario o contraseña incorrectos</p>
           </div>
         )}
 

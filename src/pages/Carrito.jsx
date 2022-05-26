@@ -15,7 +15,7 @@ const Carrito = (props) => {
         <div>
             <h1>Carrito</h1>
         <div className="purchase">    
-                <PurchaseCard  purchaseData={purchase} user={props.user} setUser={props.setUser}/>
+                <PurchaseCard  purchaseData={purchase} setPurchase={setPurchase} user={props.user} setUser={props.setUser}/>
             </div>
         </div>
     );
