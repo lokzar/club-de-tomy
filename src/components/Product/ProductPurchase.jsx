@@ -21,8 +21,7 @@ const ProductCardPurchase = (props) => {
             //console.log({...props.purchaseData, product:updatedProduct, total})
             props.setPurchase([{...props.purchaseData, product:updatedProduct, total}])
             })
-        }
-        )
+        })
     .catch(err=>console.log(err))
     }
 
