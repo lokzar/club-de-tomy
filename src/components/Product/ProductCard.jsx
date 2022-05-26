@@ -33,7 +33,7 @@ const ProductCard = (props) => {
                     axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/asignProducts`, {_id, purchaseId: newPurchase.data._id})
                         .then((productPurchase) => {
                             //console.log(productPurchase.data.total)
-                            axios.put(`${process.env.REACT_APP_SERVER_URL}/api/purchase/total`, {_id, purchaseId: productPurchase.data._id, total: productPurchase.data.total})
+                            axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/total`, {_id, purchaseId: productPurchase.data._id, total: productPurchase.data.total})
                                 .then((valuePurchase) => {
                                     props.setUser({...props.user ,purchase: [valuePurchase.data]})
                                 })
