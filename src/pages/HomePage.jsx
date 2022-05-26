@@ -1,4 +1,3 @@
-import logo from "../logo.svg";
 import "../App.css";
 import "./HomePage.css"
 
@@ -27,7 +26,7 @@ return (
   <section className="askCard">
     <h3 className="h3Home">¡Pide tu tarjeta en Recepción!</h3>
     <img className="imgHome"
-      src="https://res.cloudinary.com/dz29bpftp/image/upload/v1652987961/Club-Tomy/Bank-Card-Tomy2_lerzxn.png"></img>
+      src="https://res.cloudinary.com/dz29bpftp/image/upload/v1652987961/Club-Tomy/Bank-Card-Tomy2_lerzxn.png" alt="Tarjeta Club de Tomy"></img>
   </section>
 </div>
 );

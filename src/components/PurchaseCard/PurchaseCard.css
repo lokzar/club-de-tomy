@@ -9,6 +9,11 @@
     gap: 20px;
 }
 
+.shoppingCart{
+    height: 200px;
+    padding: 20px;
+}
+
 .purchaseBtn{
     height: 40px;
     font-size: 1.5em;

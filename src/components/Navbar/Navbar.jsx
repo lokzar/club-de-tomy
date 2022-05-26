@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import * as PATHS from "../../utils/paths";
-import * as CONSTS from "../../utils/consts";
 import loadingGif from "./logo.gif"
 
 const Navbar = (props) => {
@@ -25,7 +24,7 @@ return (
       </Link>
       <Link to={`/:${props.user?._id}`} className="authLink">
       {props.user?.username}
-      <img className="profile" src={props.user?.avatar}></img>
+      <img className="profile" src={props.user?.avatar} alt="user avatar"></img>
       </Link>
       <button className="nav-logoutbtn" onClick={props.handleLogout}>
         Salir
@@ -38,7 +37,7 @@ return (
         </Link>
         <Link to={`/:${props.user?._id}`} className="authLink">
         {props.user?.username}
-        <img className="profile" src={props.user?.avatar}></img>
+        <img className="profile" src={props.user?.avatar} alt="user avatar"></img>
         </Link>
   
         <button className="nav-logoutbtn" onClick={props.handleLogout}>

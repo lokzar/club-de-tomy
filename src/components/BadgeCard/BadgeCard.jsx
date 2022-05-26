@@ -1,4 +1,3 @@
-import {link} from 'react-router-dom'
 import "../BadgeCard/BadgeCard.css"
 
 const BadgeCard = (props) => {
@@ -7,7 +6,7 @@ const BadgeCard = (props) => {
       <div className='badgeCard'>
         <div className='badgeCardInfo'>
         <h3>{badgeData?.name}</h3>
-        <img className='imgBadge' src={badgeData?.avatar}></img>
+        <img className='imgBadge' src={badgeData?.avatar} alt="Medalla"></img>
         <p>{badgeData?.description}</p>
         </div>
       </div>
