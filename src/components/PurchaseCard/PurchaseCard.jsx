@@ -8,7 +8,7 @@ import "../PurchaseCard/PurchaseCard.css"
         const {purchaseData}=props
         const {user}=props
         function closePurchase(_id, balance){
-            axios.put(`http://localhost:5005/api/purchase/closed`,{_id, balance})
+            axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/closed`,{_id, balance})
                 .then((closedPurchase)=>{
                     console.log(closedPurchase)
                     props.setUser({...props.user, user:closedPurchase})

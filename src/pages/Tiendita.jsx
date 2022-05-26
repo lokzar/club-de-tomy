@@ -7,7 +7,7 @@ const Tiendita = (props) => {
     const[products,setProducts]=useState([])
     useEffect(() => {
         axios
-            .get("http://localhost:5005/api/product/list")
+            .get(`${process.env.REACT_APP_SERVER_URL}/product/list`)
             .then(products => {setProducts(products.data)})
             .catch(console.log)
     }, [])

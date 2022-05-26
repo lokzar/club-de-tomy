@@ -8,7 +8,7 @@ const Carrito = (props) => {
     const[purchase,setPurchase]=useState([])
     useEffect(() => {
         axios
-            .get("http://localhost:5005/api/purchase/list")
+            .get(`${process.env.REACT_APP_SERVER_URL}/purchase/list`)
             .then(purchase => {setPurchase(purchase.data)})
             .catch(console.log)
     }, [])

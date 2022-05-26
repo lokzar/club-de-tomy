@@ -18,9 +18,9 @@ const ProductCard = (props) => {
         if (openPurchase.length > 0) {
             //console.log(openPurchase)
             //console.log("hay que actualizar")
-            axios.put("http://localhost:5005/api/purchase/asignProducts", {_id, purchaseId: openPurchase[0]._id})
+            axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/asignProducts`, {_id, purchaseId: openPurchase[0]._id})
                 .then((productPurchase) => {
-                  axios.put("http://localhost:5005/api/purchase/total", {_id,purchaseId: productPurchase.data._id,total: productPurchase.data.total})
+                  axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/total`, {_id,purchaseId: productPurchase.data._id,total: productPurchase.data.total})
                     .then((valuePurchase) => {
                         //console.log(valuePurchase)
                         props.setUser({...props.user ,purchase: [valuePurchase.data]})
@@ -28,12 +28,12 @@ const ProductCard = (props) => {
                 })
         } else {
             //console.log("se crea un nuevo purchase")
-            axios.post("http://localhost:5005/api/purchase/create", {userId})
+            axios.post(`${process.env.REACT_APP_SERVER_URL}/purchase/create`, {userId})
                 .then((newPurchase) => {
-                    axios.put("http://localhost:5005/api/purchase/asignProducts", {_id, purchaseId: newPurchase.data._id})
+                    axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/asignProducts`, {_id, purchaseId: newPurchase.data._id})
                         .then((productPurchase) => {
                             //console.log(productPurchase.data.total)
-                            axios.put("http://localhost:5005/api/purchase/total", {_id, purchaseId: productPurchase.data._id, total: productPurchase.data.total})
+                            axios.put(`${process.env.REACT_APP_SERVER_URL}/api/purchase/total`, {_id, purchaseId: productPurchase.data._id, total: productPurchase.data.total})
                                 .then((valuePurchase) => {
                                     props.setUser({...props.user ,purchase: [valuePurchase.data]})
                                 })

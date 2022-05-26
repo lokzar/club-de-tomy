@@ -7,13 +7,13 @@ const {user}=props
 //console.log(props)
 //unAssign Badge
 function unAssignBadge(_id, balance){
-    axios.put(`http://localhost:5005/api/badge/value/${props.user?._id}`,{_id, balance})
+    axios.put(`${process.env.REACT_APP_SERVER_URL}/badge/value/${props.user?._id}`,{_id, balance})
     .then(()=>{
         const updatedBalance = props.user?.badge.filter(filtrado=>filtrado._id===_id)
         //console.log(updatedBalance)
         //props.setUser({...props.user, balance:updatedBalance})
         //console.log(updatedBadge)
-        axios.put(`http://localhost:5005/api/badge/delete/${props.user?._id}`,{_id})
+        axios.put(`${process.env.REACT_APP_SERVER_URL}/badge/delete/${props.user?._id}`,{_id})
         .then(badges=>{
         //console.log(badges)
         // console.log(props.user)
