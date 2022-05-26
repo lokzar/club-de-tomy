@@ -33,7 +33,7 @@ const ProductCardPurchase = (props) => {
                 <img className='imgProduct' src={productData?.image} alt={productData?.name}></img>
                 <p>{productData?.description}</p>
                 <h4>Precio: <strong>{productData?.price}</strong> Tomy Pesos</h4>
-                <button className='changeProductBtn' onClick={()=>unAssignProduct(productData?._id, purchaseData?._id, purchaseData?.total)}>Eliminar del carrito</button>
+                <button className='cartBtn' onClick={()=>unAssignProduct(productData?._id, purchaseData?._id, purchaseData?.total)}>Eliminar del carrito</button>
             </div>
         </div>
     );

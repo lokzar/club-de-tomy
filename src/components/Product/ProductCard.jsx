@@ -50,7 +50,7 @@ const ProductCard = (props) => {
               <img className='imgProduct' src={productData?.image} alt={productData?.name}></img>
               <p>{productData?.description}</p>
               <h4>Precio: <strong>{productData?.price}</strong> Tomy Pesos</h4>
-              <button className='changeProductBtn' disabled={disable} onClick={() => {createPurchase(user?._id, productData._id); setDisable(true); setBtnText("Sólo puedes pedir uno")}}>{btnText}</button>
+              <button className='storeBtn' disabled={disable} onClick={() => {createPurchase(user?._id, productData._id); setDisable(true); setBtnText("Sólo puedes pedir uno")}}>{btnText}</button>
             </div>
         </div>
     );

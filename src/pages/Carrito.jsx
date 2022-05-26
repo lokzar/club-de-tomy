@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import PurchaseCard from "../components/PurchaseCard/PurchaseCard";
 import {useState, useEffect} from "react";
+import "./Carrito.css"
 
 const Carrito = (props) => {
     const[purchase,setPurchase]=useState([])
@@ -12,7 +13,7 @@ const Carrito = (props) => {
             .catch(console.log)
     }, [])
     return (
-        <div>
+        <div className="carrito">
             <h1>Carrito</h1>
         <div className="purchase">    
                 <PurchaseCard  purchaseData={purchase} setPurchase={setPurchase} user={props.user} setUser={props.setUser}/>
