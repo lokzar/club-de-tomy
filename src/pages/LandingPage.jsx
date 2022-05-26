@@ -3,9 +3,12 @@ import "./LandingPage.css"
 import BadgeCard from "../components/BadgeCard/BadgeCard";
 import { Link } from "react-router-dom";
 import * as PATHS from "../utils/paths";
+import { useEffect, useState } from "react";
 
 
 const LandingPage = (props) => {
+console.log("badges", props?.user?.bagde)
+
 return (
 <div className="landingPageBg">
     <section className="profileInfo">

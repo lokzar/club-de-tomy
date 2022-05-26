@@ -20,6 +20,7 @@ export default function App() {
       if (!res.status) {
         return setIsLoading(false);
       }
+      console.log("set user", res.data.user)
       setUser(res.data.user);
       setIsLoading(false);
     });

@@ -4,8 +4,10 @@ import Login from "../pages/LogIn";
 import Signup from "../pages/Signup";
 import TomyBanco from "../pages/TomyBanco";
 import LandingPage from "../pages/LandingPage";
-import Tiendita from "../pages/Tiendita"
-import Carrito from "../pages/Carrito"
+import Tiendita from "../pages/Tiendita";
+import Carrito from "../pages/Carrito";
+import Compra from "../pages/PurchaseResumee"
+
 import * as PATHS from "../utils/paths";
 
 const routes = (props) => {
@@ -52,6 +54,14 @@ const routes = (props) => {
       path: PATHS.CARRITO,
       element: user ? (
         <Carrito {...props} />
+      ) : (
+        <Navigate to={PATHS.LOGINPAGE} replace />
+      ),
+    },
+    {
+      path: PATHS.COMPRA,
+      element: user ? (
+        <Compra {...props} />
       ) : (
         <Navigate to={PATHS.LOGINPAGE} replace />
       ),
