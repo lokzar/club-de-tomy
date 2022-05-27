@@ -1,6 +1,6 @@
 .landingPageBg{
  background-color: transparent;
- height: 1400px;
+ height: 1700px;
 }
 
 .profileInfo{
@@ -55,4 +55,30 @@
   .landingButton:hover {
     transform: scale(1.05);
     background-color: #169ec0;
+  }
+
+  .purchases{
+      height: fit-content;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .pending{
+    width: 300px;
+    background-color: #169ec0;
+    border-radius: 20px;
+    color: white;
+  }
+
+  .pendingImg{
+      width: 250px;
+      border-radius: 20px;
+      margin: 0 auto;
+      padding: 10px;
+  }
+
+  .pendingtotal{
+      margin: 0 auto;
+      padding: 10px;
   }

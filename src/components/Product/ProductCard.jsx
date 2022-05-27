@@ -12,12 +12,9 @@ const ProductCard = (props) => {
 
 
     function createPurchase(userId, _id) {
-        //console.log(productData)
-        //console.log(user)
+
         const openPurchase = user?.purchase.filter(filtrado => filtrado.isOpen === true)
         if (openPurchase.length > 0) {
-            //console.log(openPurchase)
-            //console.log("hay que actualizar")
             axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/asignProducts`, {_id, purchaseId: openPurchase[0]._id})
                 .then((productPurchase) => {
                   axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/total`, {_id,purchaseId: productPurchase.data._id,total: productPurchase.data.total})
@@ -27,7 +24,7 @@ const ProductCard = (props) => {
                         })
                 })
         } else {
-            //console.log("se crea un nuevo purchase")
+
             axios.post(`${process.env.REACT_APP_SERVER_URL}/purchase/create`, {userId})
                 .then((newPurchase) => {
                     axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/asignProducts`, {_id, purchaseId: newPurchase.data._id})

@@ -20,7 +20,6 @@ export default function App() {
       if (!res.status) {
         return setIsLoading(false);
       }
-      console.log("set user", res.data.user)
       setUser(res.data.user);
       setIsLoading(false);
     });
@@ -35,7 +34,6 @@ export default function App() {
     setIsLoading(true);
     logout(accessToken).then((res) => {
       if (!res.status) {
-        // deal with error here
         console.error("Logout was unsuccessful: ", res);
       }
       USER_HELPERS.removeUserToken();
@@ -51,6 +49,7 @@ export default function App() {
   if (isLoading) {
     return <LoadingComponent />;
   }
+  
   return (
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />

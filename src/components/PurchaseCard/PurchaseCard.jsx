@@ -6,18 +6,14 @@ import { Link } from 'react-router-dom';
 import * as PATHS from "../../utils/paths";
 
     const PurchaseCard = (props) => {
-        //console.log(props)
         const {purchaseData}=props
         const {user}=props
-        console.log("userProps",user)
         function closePurchase(_id, balance){
-            console.log(purchaseData[0]?._id, user?.balance)
             axios.put(`${process.env.REACT_APP_SERVER_URL}/purchase/closed`,{_id, balance})
                 .then((closedPurchase)=>{
-                    //AQUI CHECALOOOOO
-                    console.log(closedPurchase.data.purchase)
-                    props.setUser({...props.user, balance:closedPurchase.data?.balance, purchase:[closedPurchase.data?.purchase]})
-                    console.log(user)
+                    const newBalance=props.user?.balance-closedPurchase.data?.total
+                    props.setPurchase([{...props.purchaseData, isOpen:closedPurchase.data?.isOpen}])
+                    props.setUser({...props.user, balance:newBalance})                  
                 })
                 .catch(err=>console.log(err))
         }

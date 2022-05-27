@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import ProductCard from "../components/Product/ProductCard";
 import {useState, useEffect} from "react";
+import "./Tiendita.css"
 
 const Tiendita = (props) => {
     const[products,setProducts]=useState([])
@@ -12,7 +13,7 @@ const Tiendita = (props) => {
             .catch(console.log)
     }, [])
     return (
-        <div>
+        <div className="tiendita">
             <h1>Tiendita</h1>
         <div className="products">    
             {products.map(product=>

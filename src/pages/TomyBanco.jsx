@@ -3,7 +3,6 @@ import BadgeCardBank from "../components/BadgeCard/BadgeCardBank"
 import "./TomyBanco.css"
 
 const TomyBanco = (props) => {
-  //console.log(props)
   return (
     <div className="TomyBanco">
       <h1>Tomy Banco</h1>
